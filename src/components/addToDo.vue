@@ -8,8 +8,8 @@
         </button>
     </div>
 
-    <div class="col s3" v-show="isAdding">
-       <div class="card horizontal">
+    <div class="col" v-show="isAdding">
+       <div class="card horizontal small">
            <div class="card-stacked">
             <div class="card-content">
                 <div class="input-field col s12">
