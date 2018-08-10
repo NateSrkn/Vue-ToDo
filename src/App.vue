@@ -1,27 +1,36 @@
 <template>
   <div id="app">
-    <HelloWorld msg="A Vue to-do app with go here!"/>
+    <to-do-list v-bind:todos="todos" :key="todos.id" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import toDoList from './components/toDoList.vue'
+import toDoData from './assets/todos.js'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
+    toDoList,
+  },
+  data() {
+    return {
+      todos: toDoData,
+    }
+  },
 }
 </script>
 
-<style>
+<style lang="scss">
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
+
+i {
+    cursor: pointer;
+}
+
 </style>
