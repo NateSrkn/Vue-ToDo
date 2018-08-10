@@ -5,8 +5,8 @@
           <h5 class="col s6 center-align">Incomplete: {{todos.filter(todo => {return todo.isComplete === false}).length}}</h5>
       </div>
       <div class="row">
-         <toDo v-on:delete-to-do="deleteToDo" v-for="todo in todos" v-bind:todo="todo" :key="todo.id" />
          <add-to-do v-on:add-to-do="addToDo" v-bind:isAdding="isAdding" />
+         <toDo v-on:delete-to-do="deleteToDo" v-for="todo in todos" v-bind:todo="todo" :key="todo.id" />
       </div>
   </div>
 </template>

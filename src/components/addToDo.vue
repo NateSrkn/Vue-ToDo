@@ -8,12 +8,12 @@
         </button>
     </div>
 
-    <div class="col" v-show="isAdding">
+    <div id="newForm" class="col" v-show="isAdding">
        <div class="card horizontal small">
            <div class="card-stacked">
             <div class="card-content">
                 <div class="input-field col s12">
-                    <input v-model="newTitle" type="text" class="validate">
+                    <input v-model="newTitle" type="text" class="validate" autofocus >
                     <label>Title:</label>
                 </div>
                 <div class="input-field col s12">
@@ -50,6 +50,7 @@ export default {
             this.isAdding = !this.isAdding
             this.newTitle = '';
             this.newDesc = '';
+            document.getElementById("newForm").focus();
         },
         sendForm() {
             if (this.newTitle.length > 0 && this.newDesc.length > 0) {
