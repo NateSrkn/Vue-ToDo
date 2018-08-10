@@ -1,5 +1,5 @@
 <template>
-<div class="col s12 m3">
+<div class="col">
     <div class="card horizontal small" v-if="!isEditing">
         <div class="card-stacked">
             <div class="card-content">
