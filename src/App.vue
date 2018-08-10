@@ -33,4 +33,8 @@ i {
     cursor: pointer;
 }
 
+.card {
+  width:318px;
+}
+
 </style>
